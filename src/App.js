@@ -20,4 +20,13 @@ function App() {
   );
 }
 
+function Sobre() {
+  return (
+    <>
+      <h1>Sobre</h1>
+      <p>Olá<br />Como tu estás?</p>
+    </>
+  );
+}
+
 export default App;
