@@ -14,8 +14,7 @@ function App() {
     <div>
       <h1>Bem vindo a minha aplicação</h1>
       <MyButtom/>
-      <MyButtom/>
-      <MyButtom/>
+      <img className="avatar" />
     </div>
   );
 }
