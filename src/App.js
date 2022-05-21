@@ -19,6 +19,7 @@ function AboutPage() {
 }
 
 //usar IF
+/*
 const user = {
   name: 'Hedy Lamarr',
   imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
@@ -59,7 +60,9 @@ if (isLoggedIn) {
       />
     </>
   );
-}
+}         */
+
+
 //OPERADOR TERNARIO
 const user = {
   name: 'Hedy Lamarr',
@@ -78,7 +81,7 @@ function LoginForm() {
     <p>Login Form</p>
   );
 }
-export default function Profile() {
+function Profile() {
   let content;
   let isLoggedIn = true;
   return (
@@ -108,6 +111,7 @@ function App() {
     <div>
       <h1>Bem vindo a minha aplicação</h1>
       <MyButton />
+      <Profile/>
       <AboutPage/>
     </div>
   );
