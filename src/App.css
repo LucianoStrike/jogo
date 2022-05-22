@@ -31,6 +31,7 @@
 /* estilo de avatar */
 .avatar {
   border-radius: 50%;
+  background-color: #282c34;
 }
 
 @keyframes App-logo-spin {

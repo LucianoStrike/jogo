@@ -12,8 +12,8 @@ function MyButton() {
 function AboutPage() {
   return (
     <>
-      <h1>About</h1>
-      <p>Hello there.<br />How do you do?</p>
+      <h1>Sobre</h1>
+      <p>Olá.<br />Como vai??</p>
     </>
   );
 }
@@ -93,7 +93,7 @@ function Profile() {
       <img
         className="avatar"
         src={user.imageUrl}
-        alt={'Photo of ' + user.name}
+        alt={'Fotografia de ' + user.name}
         style={{
           width: user.imageSize,
           height: user.imageSize
