@@ -3,19 +3,14 @@ import './App.css';
 import { useState } from 'react'; //importamos o useState do React
 
 //adicionamos ação ao MyButton
-function MyButton() {
-  const [count, setCount] = useState(0);
-  
-  function handleClick() {
-    setCount(count + 1);
-  }
-
+function MyButton({ count, onClick }) {
   return (
-    <button onClick={handleClick}>
-      Você clicou {count} vezes.
+    <button onClick={onClick}>
+      Você clicou {count} vezes
     </button>
   );
 }
+
 
 
 //funcao sobre
@@ -141,18 +136,25 @@ function Profile() {
 
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
   return (
     <div className="corpo">
       <h1>Bem vindo a minha aplicação</h1>
       <Profile/>
-      <AboutPage/>
       <ShoppingList/>
       <div>
-        <h1>Botões separados</h1>
-        <MyButton />
-        <MyButton />
-        <MyButton />
+        <h1>Botões Separados e compartilhados</h1>
+        <MyButton count={count} onClick={handleClick} />
+        <MyButton count={count} onClick={handleClick} />
     </div>
+    
+    <div>
+      <AboutPage/>
+      </div>
     </div>
   );
 }
