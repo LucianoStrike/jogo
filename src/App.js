@@ -9,6 +9,7 @@ function MyButton() {
   );
 }
 
+//funcao sobre
 function AboutPage() {
   return (
     <>
@@ -17,6 +18,31 @@ function AboutPage() {
     </>
   );
 }
+
+//criando uma lista
+const products = [
+  { title: 'Cabbage', isFruit: false, id: 1 },
+  { title: 'Garlic', isFruit: false, id: 2 },
+  { title: 'Apple', isFruit: true, id: 3 },
+];
+
+function ShoppingList() {
+  const listItems = products.map(product =>
+    <li
+      key={product.id}
+      style={{
+        color: product.isFruit ? 'magenta' : 'darkgreen'
+      }}
+    >
+      {product.title}
+    </li>
+  );
+
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+
 
 //usar IF
 /*
@@ -82,7 +108,6 @@ function LoginForm() {
   );
 }
 function Profile() {
-  let content;
   let isLoggedIn = true;
   return (
     <>
@@ -108,11 +133,12 @@ function Profile() {
 
 function App() {
   return (
-    <div>
+    <div className="corpo">
       <h1>Bem vindo a minha aplicação</h1>
       <MyButton />
       <Profile/>
       <AboutPage/>
+      <ShoppingList/>
     </div>
   );
 }
