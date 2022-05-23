@@ -1,13 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'; //importamos o useState do React
 
-
-//vamos criar um componente
+//adicionamos ação ao MyButton
 function MyButton() {
+  const [count, setCount] = useState(0);
+  
+  function handleClick() {
+    setCount(count + 1);
+  }
+
   return (
-    <button>Clica me</button>
+    <button onClick={handleClick}>
+      Você clicou {count} vezes.
+    </button>
   );
 }
+
 
 //funcao sobre
 function AboutPage() {
@@ -89,7 +98,7 @@ if (isLoggedIn) {
 }         */
 
 
-//OPERADOR TERNARIO
+//OPERADOR TERNARIO ?
 const user = {
   name: 'Hedy Lamarr',
   imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
@@ -135,10 +144,15 @@ function App() {
   return (
     <div className="corpo">
       <h1>Bem vindo a minha aplicação</h1>
-      <MyButton />
       <Profile/>
       <AboutPage/>
       <ShoppingList/>
+      <div>
+        <h1>Botões separados</h1>
+        <MyButton />
+        <MyButton />
+        <MyButton />
+    </div>
     </div>
   );
 }
