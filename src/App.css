@@ -37,6 +37,23 @@
 .corpo{
   background-color: aqua;
 }
+.botao{
+  background-color: blue;
+  color: white;
+  border-radius: 50px;
+  
+}
+.botao h1{
+  margin-left: 200px;
+}
+.botaoClicou{
+  margin-left: 50px;
+  background-color: crimson;
+  color: white;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 15px;
+}
 
 @keyframes App-logo-spin {
   from {

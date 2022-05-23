@@ -5,7 +5,7 @@ import { useState } from 'react'; //importamos o useState do React
 //adicionamos ação ao MyButton
 function MyButton({ count, onClick }) {
   return (
-    <button onClick={onClick}>
+    <button className="botaoClicou" onClick={onClick}>
       Você clicou {count} vezes
     </button>
   );
@@ -146,8 +146,10 @@ function App() {
       <h1>Bem vindo a minha aplicação</h1>
       <Profile/>
       <ShoppingList/>
-      <div>
+      <div className="botao">
         <h1>Botões Separados e compartilhados</h1>
+        <MyButton count={count} onClick={handleClick} />
+        <MyButton count={count} onClick={handleClick} />
         <MyButton count={count} onClick={handleClick} />
         <MyButton count={count} onClick={handleClick} />
     </div>
